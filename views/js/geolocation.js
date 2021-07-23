@@ -281,23 +281,6 @@ window.addEventListener("load", () => {
             flagPopupOpened = 1; // Flag to inform that the popup popupContentOnClick is opened.
             callToGetPathCoordinates(hostId); // Function to wait a click on the path button.
           });
-          // marker.on('mouseover', async (ev) =>{ // Function to show another popup without any link, only with the visible name and/or hostname.
-          //   if(!marker.isPopupOpen()){ // Checks if the marker has already a popup open.
-          //     flagPopupOpened = 0; // if it doesn't, then the flag is set to 0. This will confirm that the popupContentOnClick is not open.
-          //   }
-          //   if(!flagPopupOpened){ // if the popupContentOnClick is opened, the mouseover effect to open the popup will not work.
-          //     setTimeout(() => {
-          //       mymap.closePopup(); // Closes all popups
-          //       ev.target.bindPopup(popupContent); // Bind the popup (without link) with the marker
-          //       ev.target.openPopup(); // this opens the popup, bound previously.
-          //     },300) // Sets delay of 300ms to open the popup.
-          //   }
-          // });
-          // marker.on('mouseout', (ev) => { // Function to close the popup when the mouse pointer leaves the marker.
-          //   if(!flagPopupOpened){ // Checks if the popupContentOnClick is opened;
-          //     ev.target.closePopup(); // if it doesn't, the popupContent is closed.
-          //   }
-          // })
         }
 
         //Checks if there is a filter active to show only the wanted marker on the map.
@@ -334,7 +317,6 @@ window.addEventListener("load", () => {
 
     promiseContent.then(() => {
       markers.addLayers([maintenance, problem, ok]); // Adds layers of markers to the markers cluster group.
-      console.log(problem)
     })
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { // Adds tile layer with credits.
@@ -355,7 +337,7 @@ window.addEventListener("load", () => {
       zoom: 18
     });
 
-    mymap.addControl( searchControl );
+    mymap.addControl( searchControl ); // Adds search control on the map.
   }
 
   getDataFromJson(); // Calls to the function that fill the map with markers that correspond to hosts whose information comes from Zabbix API.
