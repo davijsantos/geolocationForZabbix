@@ -1,0 +1,20 @@
+{
+  "manifest_version": 1.0,
+  "id": "geolocation",
+  "name": "Geolocation Module",
+  "version": "1.0",
+  "namespace": "Geolocation",
+  "author": "Davi Santos",
+  "url": "",
+  "description": "Geolocation module for monitoring with a geographic map view.",
+  "actions": {
+    "geolocation.view": {
+      "class": "GeolocationView",
+      "view": "geolocation.view",
+      "layout": "layout.htmlpage"
+    }
+  },
+  "config": {
+    "username": "davi.santos"
+  }
+}

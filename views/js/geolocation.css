@@ -1,0 +1,38 @@
+.info.legend{
+    background-color: aliceblue;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    padding: 10px 10px 10px 10px;
+    width: max-content;
+    border: #111111 dotted 2px ;
+}
+.info.legend > *{
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.info.legend button{
+    width: 100%;
+}
+.legend-cluster{
+    width: 5px;
+	height: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	border-radius: 50%;
+    color: white;
+    display: inline;
+}
+.legend-cluster.ok-status{
+    background-color: #2fb368;
+}
+.legend-cluster.problem-status{
+    background-color: #ff0000;
+}
+.legend-cluster.maintenance-status{
+    background-color: #e7a42a;
+}
